@@ -1,26 +1,22 @@
-██████╗ ██╗      ██████╗ ██╗    ██╗███╗   ██╗███████╗██████╗ 
-██╔══██╗██║      ██╔══██╗██║    ██║████╗  ██║██╔════╝██╔══██╗
-██████╔╝██║█████╗██████╔╝██║ █╗ ██║██╔██╗ ██║█████╗  ██████╔╝
-██╔═══╝ ██║╚════╝██╔═══╝ ██║███╗██║██║╚██╗██║██╔══╝  ██╔══██╗
-██║     ██║      ██║     ╚███╔███╔╝██║ ╚████║███████╗██║  ██║
-╚═╝     ╚═╝      ╚═╝      ╚══╝╚══╝ ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
+#Pi-Pwner
                                                              
 Pentesting Suite Deployer for Raspbian Stretch
+
 Developed By Jason Soto @Jsitech"
 
 
-# Remember
+## Remember
 
 Running the tools on this suite without prior mutual consent is Illegal. It is the END user responsibility to obey all applicable Laws. Author assume no liability and is not responsible for any misuse of these tools. 
 
-# What is Needed
+## What is Needed
 
 1. Raspberry Pi
 2. MicroSD card of at least 8GB
 3. Raspbian Stretch, you can get it at https://www.raspberrypi.org/downloads/raspbian/
 4. Console and internet Access
 
-# A little about Pi_Pwner
+## A little about Pi-Pwner
 
 Pi-Pwner is a bash script that will load a comprehensive suite of pentesting tools and scripts onto a Raspberry Pi
 running Raspbian Stretch. At the end of the Deployments you will have a set of tools that will help during a penetration testing engagement to perform information gathering, sniffing, spoofing, wireless attacks, post-exploitation and more.
@@ -54,20 +50,22 @@ Other tools and scripts include:
 
 This is just a small list and the plans are to extend the capabilities of Pi_Pwner. I will be creating a blog explaining some uses of the tools loaded.
 
-# Deploying Pi-Pwner
+## Deploying Pi-Pwner
 
 Clone the github repo and run the Script
 
-`git clone https://github.com/jsitech/Pi-Pwner`
-`cd Pi-Pwner`
-`./Pi-Pwner.sh`
+```
+git clone https://github.com/jsitech/Pi-Pwner
+cd Pi-Pwner
+./Pi-Pwner.sh
 
-# Issues or Feature request
+```
+## Issues or Feature request
 
 If you encounter any issues or feel we are missing something, Please open up an issue on Github. Pull request are
 also very welcome.
 
-# ChangeLog
+## ChangeLog
 
 v1.0 - Initial Release
 
