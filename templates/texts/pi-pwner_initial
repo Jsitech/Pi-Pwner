@@ -1,0 +1,30 @@
+
+██████╗ ██╗      ██████╗ ██╗    ██╗███╗   ██╗███████╗██████╗ 
+██╔══██╗██║      ██╔══██╗██║    ██║████╗  ██║██╔════╝██╔══██╗
+██████╔╝██║█████╗██████╔╝██║ █╗ ██║██╔██╗ ██║█████╗  ██████╔╝
+██╔═══╝ ██║╚════╝██╔═══╝ ██║███╗██║██║╚██╗██║██╔══╝  ██╔══██╗
+██║     ██║      ██║     ╚███╔███╔╝██║ ╚████║███████╗██║  ██║
+╚═╝     ╚═╝      ╚═╝      ╚══╝╚══╝ ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
+                                                             
+         ****** Pi-Pwner Release 1.0 ******
+Raspberry Pi Pentesting Suite Deployer for Raspbian Stretch                                                      
+**************************************************************
+
+This Deployer will load and configure a comprehensive suite of
+Pentesting software onto your Raspberri Pi. This script was
+tested on a clean install of Raspbian Stretch. If you feel tools
+are missing, you have the ability to expand your toolset and we
+appreciate if you let us know so we can include them in future
+releases.
+
+****************************************************************
+* Running the tools on this suite without prior mutual consent *
+*  is Illegal. It is the END user responsibility to obey all   *
+*   applicable Laws. Author assume no liability and is not     *
+*    responsible for any misuse of these tools.                *
+****************************************************************
+
+
+
+
+
