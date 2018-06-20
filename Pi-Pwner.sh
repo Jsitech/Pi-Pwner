@@ -39,7 +39,6 @@ if [ "$USER" != "root" ]; then
       exit
 else
       clear
-      f_banner
       cat templates/texts/pi-pwner_initial
       echo "Press Enter to continue, CTRL+C to abort"
       read INPUT
@@ -217,16 +216,56 @@ echo ""
 echo "[+] Social Engineer Toolkit Installed"
 }
 ##############################################################################################################
+
+#Setup Pi-Pwner Wifi Access Point
+
+clear
+f_banner
+
+setup_wifiap(){
+cd $pipwner_home
+echo "[+] Setting up Pi-Pwner Wifi AP......"
+apt install hostapd dnsmasq
+echo ""
+echo "[+] Setting up Hostapd..."
+echo ""
+echo "[?] Please type in a Passphrase (Length 8 or longer) for the WiFi AP: " ; read wifiappass
+sed -i s/PASS/$wifiappass/g templates/hostapd.conf
+cp templates/hostapd.conf /etc/hostapd/hostapd.conf
+cp templates/hostapd /etc/default/hostapd
+echo "[+] Setting up Dnsmasq...."
+echo "interface wlan0" >> /etc/dhcpcd.conf
+echo "static ip_address=192.168.1.1" >> /etc/dhcpcd.conf
+echo "static routers=192.168.1.1" >> /etc/dhcpcd.conf
+echo "static domain_name_servers=8.8.8.8" >> /etc/dhcpcd.conf      
+
+echo "interface=wlan0" >> /etc/dnsmasq.conf
+echo "domain-needed" >> /etc/dnsmasq.conf
+echo "bogus-priv" >> /etc/dnsmasq.conf
+echo "dhcp-range=192.168.1.8,192.168.1.15,12h" >> /etc/dnsmasq.conf
+
+echo ""
+echo "[+] Done setting up Pi-Pwner Wifi AP, Will show up after reboot......"
+sleep 1
+}
+
+
+##############################################################################################################
+
 # Final Steps
 
 final_steps(){
 clear
-cd $pipwner_home
 cat templates/texts/pi-pwner_finish
+echo -n "[+] We will now Reboot......."
+echo -n "Press Enter to continue, CTRL+C to abort"
+read INPUT
+reboot
 }
 
 check_root                     # Check for Root User
 update_raspbian                # Update Raspbian
 install_dep_tools              # Install Dependencies and Base Pentesting tools
 install_pentest_tools          # Install Pentesting Tools to /opt/pentest
+setup_wifiap                   # Setup Pi-Pwner Wifi AP
 final_steps                    # Final Steps
