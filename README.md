@@ -50,6 +50,9 @@ Other tools and scripts include:
 
 This is just a small list and the plans are to extend the capabilities of Pi_Pwner. I will be creating a blog explaining some uses of the tools loaded.
 
+Recently added is WiFi Access point functionality to connect to the Pi-Pwner from a nearby location. When to connect via the AP you can access the device
+via the IP Address 192.168.1.1. You can modify this if required.
+
 ## Deploying Pi-Pwner
 
 Clone the github repo and run the Script
